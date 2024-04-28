@@ -27,5 +27,8 @@ Scenario('Liking adn unLikikng one Restaurant', async ({ I }) => {
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
+  I.amOnPage('/#/like');
+  I.dontSee(firstRestaurantTitle);
+
   pause();
 });
